@@ -1,21 +1,11 @@
 <?php include "./database/Session.php"; ?>
 <?php include "./database/Database.php"; ?>
 <?php include "./inc/header.php"; ?>
-<?php
-if(!isset($_GET['author']) || $_GET['author'] == null){
-	header("Location: index.php");
-} else { ?>
+
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header"><?php echo "<b style='color:red;'>".$_GET['author']."</b>"; ?> এর বই সমূহ</h1>
-            <?php
-            //Session::init();
-            $msg = Session::get('msg');
-            if (!empty($msg)) {
-            echo '<h2 class="alert alert-info text-right">' . $msg . '</h2>';
-            Session::unset();
-            } ?>
+            <h1 class="page-header">ইনশাল্লাহ সংগ্রহ করা হবে</h1>
     </div>
     <!-- /.col-lg-12 -->
 </div>
@@ -64,8 +54,7 @@ if(!isset($_GET['author']) || $_GET['author'] == null){
                                 echo 'Connection failed: ' . $e->getMessage();
                             }
                             $table = "tbl_books";
-                            $author = $_GET['author'];
-                            $query = "SELECT * FROM `".$table."` WHERE `author` LIKE '%{$author}%'";
+                            $query = "SELECT * FROM `".$table."` WHERE `tbl_books`.`status` = 0";
                             $stmt = $dbh->prepare($query);
                             //$stmt->bindValue(':search', '%' . $author . '%');
                             $stmt->execute();
@@ -144,6 +133,5 @@ if(!isset($_GET['author']) || $_GET['author'] == null){
 <!-- /.row -->
 
 </div>
-                            <?php } ?>
 <!-- /#page-wrapper -->
 <?php include "./inc/footer.php"; ?>

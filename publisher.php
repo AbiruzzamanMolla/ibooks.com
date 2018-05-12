@@ -2,13 +2,13 @@
 <?php include "./database/Database.php"; ?>
 <?php include "./inc/header.php"; ?>
 <?php
-if(!isset($_GET['author']) || $_GET['author'] == null){
+if(!isset($_GET['publisher']) || $_GET['publisher'] == null){
 	header("Location: index.php");
 } else { ?>
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header"><?php echo "<b style='color:red;'>".$_GET['author']."</b>"; ?> এর বই সমূহ</h1>
+            <h1 class="page-header"><?php echo "<b style='color:red;'>".$_GET['publisher']."</b>"; ?> এর বই সমূহ</h1>
             <?php
             //Session::init();
             $msg = Session::get('msg');
@@ -64,8 +64,8 @@ if(!isset($_GET['author']) || $_GET['author'] == null){
                                 echo 'Connection failed: ' . $e->getMessage();
                             }
                             $table = "tbl_books";
-                            $author = $_GET['author'];
-                            $query = "SELECT * FROM `".$table."` WHERE `author` LIKE '%{$author}%'";
+                            $publisher = $_GET['publisher'];
+                            $query = "SELECT * FROM `".$table."` WHERE `publisher` LIKE '%{$publisher}%'";
                             $stmt = $dbh->prepare($query);
                             //$stmt->bindValue(':search', '%' . $author . '%');
                             $stmt->execute();

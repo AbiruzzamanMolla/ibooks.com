@@ -33,7 +33,10 @@
                 <a href="#"><i class="fa fa-book fa-fw"></i> সংগ্রহ সমূহ<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="listbooks.php">নতুন যুক্ত করুন</a>
+                        <a href="bought.php">সংগ্রহে আছে</a>
+                    </li>
+                    <li>
+                        <a href="want2buy.php">সংগ্রহ করবো ইনশাল্লাহ</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->
