@@ -6,13 +6,6 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">সকল বইয়ের লিস্ট</h1>
-            <?php
-            //Session::init();
-            $msg = Session::get('msg');
-            if (!empty($msg)) {
-            echo '<h2 class="alert alert-info text-right">' . $msg . '</h2>';
-            Session::unset();
-            } ?>
     </div>
     <!-- /.col-lg-12 -->
 </div>
