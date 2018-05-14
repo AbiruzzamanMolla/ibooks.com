@@ -27,7 +27,9 @@ $preview = $_FILES["preview"]["name"];
             'status' => $_POST['status'],
             'process' => $_POST['process'],
             'review' => $_POST['review'],
-            'tags' => $_POST['tags']
+            'tags' => $_POST['tags'],
+            'buy_priority' => 0,
+            'reading' => 0
         );
         $insert = $db->insert($table, $books);
         // if ($insert) {

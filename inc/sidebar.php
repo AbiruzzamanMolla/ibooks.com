@@ -13,7 +13,7 @@
                 <!-- /input-group -->
             </li>
             <li>
-                <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> সকল বই সমূহ</a>
+                <a href="allbooks.php"><i class="fa fa-dashboard fa-fw"></i> সকল বই সমূহ</a>
             </li>
             <li>
                 <a href="#"><i class="fa fa-book fa-fw"></i> লেখক সমূহ<span class="fa arrow"></span></a>
