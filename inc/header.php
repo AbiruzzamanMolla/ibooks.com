@@ -11,6 +11,7 @@
     <meta name="author" content="">
 
     <title>বইয়ের রাজ্য</title>
+    <script src="./vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core CSS -->
     <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">

@@ -1,7 +1,7 @@
 <!-- Button trigger modal -->
                         <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                            Launch Demo Modal
-                        </button>
+                                        রিভিউ দেখুনঃ
+                                        </button>
                         <!-- Modal -->
                         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog">

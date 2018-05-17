@@ -9,6 +9,7 @@ $db = new Database();
 $table = "tbl_books";
 
 if(isset($_REQUEST['submit'])){
+    $buy_link = "http://nolink.yet"
 $preview = $_FILES["preview"]["name"];
         $preview = $_FILES['preview']['name'];
         $preview_temp = $_FILES['preview']['tmp_name'];
@@ -25,11 +26,14 @@ $preview = $_FILES["preview"]["name"];
             'price' => $_POST['price'],
             'discount' => $_POST['discount'],
             'status' => $_POST['status'],
+            'buy_link' => $buy_link,
             'process' => $_POST['process'],
             'review' => $_POST['review'],
             'tags' => $_POST['tags'],
             'buy_priority' => 0,
-            'reading' => 0
+            'reading' => 0,
+            'created' => 0,
+            'updated' => 0
         );
         $insert = $db->insert($table, $books);
         // if ($insert) {

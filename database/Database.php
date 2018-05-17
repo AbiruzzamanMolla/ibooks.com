@@ -22,10 +22,12 @@ class Database
                 $link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $link->exec("SET CHARACTER SET utf8");
                 $this->pdo = $link;
+                
             } catch (PDOException $e) {
                 die("Faild to Connect with Database" . $e->getMessage());
             }
         }
+        
     }
     // Read Data
     // $sql = $this->pdo->prepare("SELECT * FROM tableName WHERE id=:id AND email=:email LIMIT 1");

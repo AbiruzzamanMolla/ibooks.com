@@ -9,7 +9,7 @@ while($row = mysqli_fetch_assoc($result)){
     $authors = explode(',', $author);
     foreach($authors as $author){
         echo '<li class="divider"></li>';
-        echo '<li><a href="authors.php?author='.$author.'">'.$author.'</a></li>';
+        echo '<li><a href="authors.php?author='.trim($author).'">'.trim($author).'</a></li>';
     }
 }
 mysqli_close($con);
