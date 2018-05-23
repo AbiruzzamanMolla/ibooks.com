@@ -98,7 +98,6 @@ if (isset($_POST['submit'])) {
                         $table = "tbl_books";
                         $query = "SELECT * FROM `".$table."` WHERE `tbl_books`.`buy_priority` = 1";
                         $stmt = $dbh->prepare($query);
-                        //$stmt->bindValue(':search', '%' . $author . '%');
                         $stmt->execute();
                         if ($stmt->rowCount() > 0) { 
                         $result = $stmt->fetchAll();
@@ -162,14 +161,14 @@ if (isset($_POST['submit'])) {
                         </div>
                         <div class="panel-body" style="height:300px;overflow: scroll;">
                             <?php
-                        $query = "SELECT * FROM `tbl_books` WHERE `tbl_books`.`reading` >= 1 AND `tbl_books`.`reading` != 10000";
+                        $query = "SELECT * FROM `tbl_books` WHERE `tbl_books`.`reading` >= 1 AND `tbl_books`.`reading` != 'Finished'";
                         $stmt = $dbh->prepare($query);
                         $stmt->execute();
                         if ($stmt->rowCount() > 0) { 
                         $result = $stmt->fetchAll();
                             foreach( $result as $data ) {
                         ?>
-                                <a rel='<?php echo $data[' id ']; ?>' class='reply_comment_link' href='javascript:void(0)'>
+                                <a rel='<?php echo $data['id']; ?>' class='reply_comment_link' href='javascript:void(0)'>
                                     <h4>
                                         <?php echo $data['name']; ?>
                                         <small class="pull-right text-right">(
